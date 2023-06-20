@@ -4,7 +4,7 @@
     <div asp-validation-summary="ModelOnly">
     </div>
     <div class="col-md-6">
-        <form>
+        <form asp-action="Register" asp-controller="Auth" method="post">
             <div class="form-group">
                 <label asp-for="Nom"></label>
                 <input asp-for="Nom" class="form-control" />
@@ -28,7 +28,7 @@
             <div class="form-group">
                 <label asp-for="Confirm"></label>
                 <input asp-for="Confirm" class="form-control" />
-                <span asp-validation-for="Confirm" class="text-danger"></span>)
+                <span asp-validation-for="Confirm" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Register" class="btn btn-primary" />
