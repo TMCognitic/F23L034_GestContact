@@ -1,41 +1,38 @@
 ﻿@model RegisterForm
 
 <div class="row">
-    <div>
-        @Html.ValidationSummary(true, null, new { @class = "text-danger" })
+    <div asp-validation-summary="ModelOnly">
     </div>
     <div class="col-md-6">
-
-        @using (Html.BeginForm())
-        {
+        <form>
             <div class="form-group">
-                @Html.LabelFor(m => m.Nom)
-                @Html.TextBoxFor(m => m.Nom, new { @class = "form-control" })
-                @Html.ValidationMessageFor(m => m.Nom, null, new { @class = "text-danger" })
+                <label asp-for="Nom"></label>
+                <input asp-for="Nom" class="form-control" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Prenom)
-                @Html.TextBoxFor(m => m.Prenom, new { @class = "form-control" })
-                @Html.ValidationMessageFor(m => m.Prenom, null, new { @class = "text-danger" })
+                <label asp-for="Prenom"></label>
+                <input asp-for="Prenom" class="form-control" />
+                <span asp-validation-for="Prenom" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Email)
-                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                @Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Passwd)
-                @Html.PasswordFor(m => m.Passwd, new { @class = "form-control" })
-                @Html.ValidationMessageFor(m => m.Passwd, null, new { @class = "text-danger" })
+                <label asp-for="Passwd"></label>
+                <input asp-for="Passwd" class="form-control" />
+                <span asp-validation-for="Passwd" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Confirm)
-                @Html.PasswordFor(m => m.Confirm, new { @class = "form-control" })
-                @Html.ValidationMessageFor(m => m.Confirm, null, new { @class = "text-danger" })
+                <label asp-for="Confirm"></label>
+                <input asp-for="Confirm" class="form-control" />
+                <span asp-validation-for="Confirm" class="text-danger"></span>)
             </div>
             <div class="form-group">
                 <input type="submit" value="Register" class="btn btn-primary" />
             </div>
-        }
+        </form>
     </div>
 </div>
