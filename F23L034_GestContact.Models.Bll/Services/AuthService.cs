@@ -11,9 +11,9 @@ namespace F23L034_GestContact.Models.Bll.Services
     {
         private readonly IAuthDalRepository _authDalRepository;
             
-        public AuthService()
+        public AuthService(IAuthDalRepository authDalRepository)
         {
-            _authDalRepository = new AuthDalService();
+            _authDalRepository = authDalRepository;
         }
 
         public Utilisateur? Login(string email, string passwd)

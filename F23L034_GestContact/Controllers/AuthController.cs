@@ -14,9 +14,9 @@ namespace F23L034_GestContact.Controllers
 
         private readonly IAuthRepository _authRepository;
 
-        public AuthController()
+        public AuthController(IAuthRepository authRepository)
         {
-            _authRepository = new AuthService();
+            _authRepository = authRepository;
         }
 
         public IActionResult Index()
